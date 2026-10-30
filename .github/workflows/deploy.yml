@@ -50,6 +50,7 @@ jobs:
         run: pnpm run docs:build
         env:
           NODE_OPTIONS: --max-old-space-size=8192
+          HOSTNAME: https://danousger.github.io
 
       - name: Upload artifact (PR preview only)
         if: github.event_name == 'pull_request'
